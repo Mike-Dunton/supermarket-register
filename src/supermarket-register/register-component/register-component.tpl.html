@@ -10,11 +10,11 @@
     <hr />
 
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-6">
             <form>
                 <label>Products</label>
-                <textarea ng-model="productList" class="form-control" rows="5" id="comment"></textarea>
-                <button class="btn btn-success btn-block" ng-click="$ctrl.getPrices()" ng-disabled="!$ctrl.productList.length">
+                <textarea ng-model="$ctrl.productList" class="form-control" rows="5" id="comment"></textarea>
+                <button class="btn btn-success btn-block" ng-click="$ctrl.getPrices()" ng-disabled="!$ctrl.isProductListValid()">
                     <i class="fa fa-plus fa-lg"></i> Go!
                 </button>
             </form>

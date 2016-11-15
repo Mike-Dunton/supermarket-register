@@ -1,7 +1,5 @@
 # supermarketRegister
-Based off of https://github.com/tomastrajan/angular-js-es6-testing-example/blob/1.5.0/src/feature-b/todo-component/todo-component.js
- 
- This Angular JS seed is a good start that focuses on unit and intergration testing. 
+Based off of https://github.com/tomastrajan/angular-js-es6-testing-example/blob/1.5.0/src/feature-b/todo-component/todo-component.js This Angular JS seed is a good start that focuses on unit and intergration testing. 
 
  ## Getting Started
  ```
@@ -15,3 +13,6 @@ All scripts should be run with `npm run [script]`, for example `npm run test`
 
 * `start` - Start development server on port 8081 (opens a browser window)
 * `test` lint code and run all tests. 
+
+## Register Application
+The register application and tests can be found in `src/supermarket-register/`

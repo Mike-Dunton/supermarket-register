@@ -19,4 +19,8 @@ export default class RegisterComponent {
         this.totalCost = totalCost;
     }
 
+    isProductListValid() {
+        return this.productList.length > 0;
+    }
+
 }
