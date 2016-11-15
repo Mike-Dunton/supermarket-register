@@ -20,7 +20,7 @@ module.exports = function(config) {
             devtool: 'eval',
             module: {
                 loaders: [
-                    {test: /\.js$/, loader: 'babel', exclude: /(\.test.js$|node_modules)/},
+                    {test: /\.js$/, loader: 'babel', exclude: /(\.test.js$|node_modules)/, query: {presets: ['es2015']}},
                     {test: /\.css$/, loader: 'style!css'},
                     {test: /\.tpl.html/, loader: 'html'},
                     {test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/, loader: 'url?limit=50000'}

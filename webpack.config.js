@@ -9,7 +9,7 @@ var OpenBrowserWebpackPlugin = require('open-browser-webpack-plugin');
 
 var PARAMS_DEFAULT = {
     resolve: {
-        extensions: ['', '.js', '.tpl.html']
+        extensions: ['', '.js','.tpl.html']
     },
     entry: {
         main: './src/main.js',
@@ -88,7 +88,7 @@ module.exports = {
     output: params.output,
     module: {
         loaders: [
-            {test: /\.js$/, loader: 'babel', exclude: /(\.test.js$|node_modules)/},
+            {test: /\.js$/, loader: 'babel', exclude: /(\.test.js$|node_modules)/, query: {presets: ['es2015']}},
             {test: /\.css$/, loader: 'style!css'},
             {test: /\.tpl.html/, loader: 'html'},
             {test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/, loader: 'url?limit=50000'}
