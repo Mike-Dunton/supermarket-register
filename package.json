@@ -1,7 +1,7 @@
 {
-  "name": "angular-js-es6-testing-example",
+  "name": "supermarket-register",
   "version": "1.0.0",
-  "description": "Enhanced testing of Angular JS 1.X applications using ES6 modules",
+  "description": "supermarket-register web application",
   "main": "src/app.js",
   "scripts": {
     "start": "webpack-dev-server --TARGET=DEV",
@@ -16,7 +16,7 @@
     "test": "npm run lint && npm run mocha && karma start --single-run",
     "ci": "npm run lint && npm run mocha && npm run dist"
   },
-  "author": "tomas.trajan@gmail.com",
+  "author": "mr.mikedunton@gmail.com",
   "license": "ISC",
   "dependencies": {
     "angular": "1.5",
