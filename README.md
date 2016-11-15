@@ -5,7 +5,7 @@ Based off of https://github.com/tomastrajan/angular-js-es6-testing-example/blob/
 
  ## Getting Started
  ```
- git clone https://github.com/mike-dunton/supermarketRegister.git
+ git clone https://github.com/Mike-Dunton/supermarket-register.git
  cd supermarketRegister
  npm install
  ```
