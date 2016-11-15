@@ -14,4 +14,4 @@ Based off of https://github.com/tomastrajan/angular-js-es6-testing-example/blob/
 All scripts should be run with `npm run [script]`, for example `npm run test`
 
 * `start` - Start development server on port 8081 (opens a browser window)
-* `test` lint code and run all tests.
+* `test` lint code and run all tests. 

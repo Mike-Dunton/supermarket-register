@@ -1,0 +1,23 @@
+<div class="jumbotron">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Supermarket Register</h1>
+        </div>
+    </div>
+
+    <br />
+    <hr />
+
+    <div class="row">
+        <div class="col-md-3">
+            <form>
+                <label>Products</label>
+                <textarea ng-model="productList" class="form-control" rows="5" id="comment"></textarea>
+                <button class="btn btn-success btn-block" ng-click="$ctrl.getPrices()" ng-disabled="!$ctrl.productList.length">
+                    <i class="fa fa-plus fa-lg"></i> Go!
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
