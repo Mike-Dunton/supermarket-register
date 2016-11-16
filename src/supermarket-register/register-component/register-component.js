@@ -9,17 +9,19 @@ export default class RegisterComponent {
     }
 
     getTotals() {
-        let totalCost = this.productList.split(';').reduce((runningTotal, currentProductId) => {
+        if(this.isProductListValid) {
+            let totalCost = this.productList.split(';').reduce((runningTotal, currentProductId) => {
             let currentProduct = this.RegisterService.get(currentProductId);
-            if(currentProduct) {
-                return currentProduct.price + runningTotal;
-            } else {
-                return runningTotal;
-            }            
-        }, 0);
-        
-        this.totalCost = totalCost;
-        this.totalCostWithTax = totalCost + (totalCost * this.taxRate);
+                if(currentProduct) {
+                    return currentProduct.price + runningTotal;
+                } else {
+                    return runningTotal;
+                }            
+            }, 0);
+            
+            this.totalCost = totalCost;
+            this.totalCostWithTax = totalCost + (totalCost * this.taxRate);
+        }
     }
 
     isProductListValid() {
