@@ -10,21 +10,28 @@ describe('RegisterService', function() {
         let initialProducts = {
             "A12T-4GH7-QPL9-3N4M" : {
                 name: "Cereal",
-                price: 3.46
+                price: 346
             },
             "E5T6-9UI3-TH15-QR88" : {
                 name: "Chicken",
-                price: 8.18
+                price: 818
             },
             "YRT6-72AS-K736-L4AR" : {
                 name: "Pop",
-                price: 1.63
+                price: 163
             }
         }
         service = new RegisterService(initialProducts);
     });
 
-    it('should contain empty todos after initialization', function () {
+    it('should contain 3 Products after initialization', function () {
         assert.equal(Object.keys(service.products).length, 3);
     });
+
+    it('should return a product by id', function () {
+        let product = service.get('YRT6-72AS-K736-L4AR');
+        assert.equal(product.name, "Pop");
+        assert.equal(product.price, 163);
+    });
+
 });
