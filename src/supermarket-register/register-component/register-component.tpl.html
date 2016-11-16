@@ -12,12 +12,30 @@
     <div class="row">
         <div class="col-md-6">
             <form>
-                <label>Products</label>
+                <label>Enter Products</label>
                 <textarea ng-model="$ctrl.productList" class="form-control" rows="5" id="comment"></textarea>
-                <button class="btn btn-success btn-block" ng-click="$ctrl.getPrices()" ng-disabled="!$ctrl.isProductListValid()">
+                <button class="btn btn-success btn-block" ng-click="$ctrl.getTotals()" ng-disabled="!$ctrl.isProductListValid()">
                     <i class="fa fa-plus fa-lg"></i> Go!
                 </button>
             </form>
+        </div>
+        <div class="col-md-6">
+            <label>Receipt</label>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    List Items here....
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-md-6">
+                            Total: {{$ctrl.totalCost | PennyToDollar}}
+                        </div>
+                        <div class="col-md-6">
+                            Total after tax: {{$ctrl.totalCostWithTax | PennyToDollar}}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

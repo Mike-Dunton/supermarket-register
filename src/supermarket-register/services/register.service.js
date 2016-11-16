@@ -5,7 +5,7 @@ export default class RegisterService {
     }
 
     get(productId) {
-        return this.products[productId];
+        return this.products[productId.toUpperCase()];
     }
 
     getAll() {

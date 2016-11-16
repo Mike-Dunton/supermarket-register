@@ -29,7 +29,13 @@ describe('RegisterService', function() {
     });
 
     it('should return a product by id', function () {
-        let product = service.get('YRT6-72AS-K736-L4AR');
+        let {name, price} = service.get('YRT6-72AS-K736-L4AR');
+        assert.equal(name, "Pop");
+        assert.equal(price, 163);
+    });
+
+    it('should be case insensitive and return a product by id', function () {
+        let product = service.get('yrT6-72as-k736-l4ar');
         assert.equal(product.name, "Pop");
         assert.equal(product.price, 163);
     });

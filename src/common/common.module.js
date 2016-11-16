@@ -1,8 +1,8 @@
 import angular from 'angular';
 
-import UserInfoComponent from './component/user-info-component';
+import PennyToDollar from './filter/penny-to-dollar';
 
 export default angular
     .module('main.app.common', [])
-    .component('userInfoComponent', UserInfoComponent)
+    .filter({PennyToDollar})
     .name;
