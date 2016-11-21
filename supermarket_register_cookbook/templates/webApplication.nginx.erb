@@ -3,7 +3,8 @@ server {
   server_name <%= node['web_application']['host'] %>;
 
   location / {
-    root <%= node['web_application']['location'] %>
+    root <%= node['web_application']['location'] %>;
+    
     # to serve gzipped text and json responses
     gzip on;
     gzip_min_length 1000;

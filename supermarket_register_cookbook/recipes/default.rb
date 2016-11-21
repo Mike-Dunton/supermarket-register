@@ -6,4 +6,4 @@
 
 include_recipe 'selinux::permissive'
 include_recipe 'supermarket_register::firewall'
-include_recipe 'supermarket_register::web_user'
+include_recipe 'supermarket_register::web'
