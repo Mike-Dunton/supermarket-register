@@ -13,6 +13,9 @@ provisioner:
   #   always_update_cookbooks: <%= !ENV['CI'] %>
   always_update_cookbooks: true
 
+verifier:
+  name: inspec
+
 platforms:
   - name: centos-6.7
 
