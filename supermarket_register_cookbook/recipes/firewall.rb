@@ -6,6 +6,6 @@
 include_recipe 'firewall::default'
 
 ports = node['web_application']['open_ports']
-firewall_rule "open ports #{ports}" do 
-    port ports
+firewall_rule "open ports #{ports}" do
+  port ports
 end

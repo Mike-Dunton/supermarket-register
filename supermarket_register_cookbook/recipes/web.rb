@@ -12,10 +12,8 @@ directory node['web_application']['location'] do
   mode '0755'
 end
 
-template '/etc/nginx/sites-available/webApplication' do 
-    source 'webApplication.nginx.erb'
+template '/etc/nginx/sites-available/webApplication' do
+  source 'webApplication.nginx.erb'
 end
 
 nginx_site 'webApplication'
-
-
