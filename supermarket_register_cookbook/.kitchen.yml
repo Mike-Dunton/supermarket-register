@@ -1,6 +1,8 @@
 ---
 driver:
   name: vagrant
+  synced_folders:
+    - ["../supermarket-register/dist", "/var/www/web_application"]
   network:
     - ["private_network", {ip: "192.168.33.33"}]
 
