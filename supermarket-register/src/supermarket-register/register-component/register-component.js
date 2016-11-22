@@ -9,7 +9,7 @@ export default class RegisterComponent {
     }
 
     getTotals() {
-        if(this.isProductListValid) {
+        if(this.isProductListValid()) {
             let totalCost = this.productList.split(';').reduce((runningTotal, currentProductId) => {
             let currentProduct = this.RegisterService.get(currentProductId);
                 if(currentProduct) {
