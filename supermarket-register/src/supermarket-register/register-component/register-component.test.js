@@ -2,6 +2,7 @@ import * as sinon from 'sinon';
 
 import RegisterComponent from './register-component.js';
 import RegisterService from '../services/register.service.js';
+import { DEFAULT_PRODUCTS } from '../supermarket-register.constants.js';
 
 let component;
 let mockRegisterService;
@@ -9,8 +10,7 @@ let mockRegisterService;
 describe('RegisterComponent with mocked service (unit test)', function() {
 
     beforeEach(function() {
-        let initialProducts = [];
-        let RegisterServiceInstance = new RegisterService(initialProducts);
+        let RegisterServiceInstance = new RegisterService(DEFAULT_PRODUCTS);
         mockRegisterService = sinon.mock(RegisterServiceInstance);
         component = new RegisterComponent(RegisterServiceInstance);
     });
@@ -19,12 +19,25 @@ describe('RegisterComponent with mocked service (unit test)', function() {
        mockRegisterService.restore();
     });
 
-    it('should getTotals for 0 products', function () {
+    it('should get cost for 0 products when no products are  input', function () {
         mockRegisterService
             .expects('get')
             .never();
 
         component.productList = '';
+        component.getTotals();
+
+        mockRegisterService.verify();
+    });
+
+    it('should get cost for 1 product when one product is input', function () {
+        mockRegisterService
+            .expects('get')
+            .once()
+            .withArgs('asd');
+
+
+        component.productList = 'asd';
         component.getTotals();
 
         mockRegisterService.verify();
