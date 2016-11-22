@@ -1,4 +1,4 @@
-# supermarket register
+# supermarket register [![Build Status](https://drone.io/github.com/Mike-Dunton/supermarket-register/status.png)](https://drone.io/github.com/Mike-Dunton/supermarket-register/latest)
 
 ## Application 
 Based off of https://github.com/tomastrajan/angular-js-es6-testing-example/blob/1.5.0/src/feature-b/todo-component/todo-component.js This Angular JS seed is a good start that focuses on unit and intergration testing. 
