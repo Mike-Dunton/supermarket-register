@@ -7,3 +7,4 @@
 include_recipe 'selinux::permissive'
 include_recipe 'supermarket_register::firewall'
 include_recipe 'supermarket_register::web'
+include_recipe 'supermarket_register::config_app'
