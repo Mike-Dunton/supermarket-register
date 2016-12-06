@@ -13,8 +13,8 @@ describe 'supermarket_register_cookbook::config_app' do
       runner.converge(described_recipe)
     end
 
-    it 'converges successfully' do
-      expect { chef_run }.to_not raise_error
+    it 'downloads the application archive' do
+      expect(chef_run).to create_file('/tmp/webApplication.tar.gz')
     end
   end
 end

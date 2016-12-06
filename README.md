@@ -1,7 +1,7 @@
 # supermarket register [![Build Status](https://drone.io/github.com/Mike-Dunton/supermarket-register/status.png)](https://drone.io/github.com/Mike-Dunton/supermarket-register/latest)
 
 ## Application 
-Based off of https://github.com/tomastrajan/angular-js-es6-testing-example/blob/1.5.0/src/feature-b/todo-component/todo-component.js This Angular JS seed is a good start that focuses on unit and intergration testing. 
+Based off of https://github.com/tomastrajan/angular-js-es6-testing-example This Angular JS seed is a good start that focuses on unit and intergration testing. 
 
  ## Getting Started
  ```
@@ -26,3 +26,4 @@ The register application and tests can be found in `supermarket-register/src/sup
  cd supermarket-register/supermarket_register_cookbook
  kitchen verify
  ```
+After running kitchen verify you should be able to navigate to 192.168.33.33 to see the application. 
