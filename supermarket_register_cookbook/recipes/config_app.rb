@@ -15,8 +15,8 @@ template '/etc/nginx/sites-available/webApplication' do
   source 'webApplication.nginx.erb'
 end
 
-remote_file "/tmp/webApplication.tar.gz" do
-   source node['web_application']['download_location']
+remote_file '/tmp/webApplication.tar.gz' do
+  source node['web_application']['download_location']
 end
 
 execute 'extract_application_files' do
