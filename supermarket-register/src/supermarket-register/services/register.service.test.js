@@ -35,9 +35,9 @@ describe('RegisterService', function() {
     });
 
     it('should be case insensitive and return a product by id', function () {
-        let product = service.get('yrT6-72as-k736-l4ar');
-        assert.equal(product.name, "Pop");
-        assert.equal(product.price, 163);
+        let {name, price} = service.get('yrT6-72as-k736-l4ar');
+        assert.equal(name, "Pop");
+        assert.equal(price, 163);
     });
 
 });
